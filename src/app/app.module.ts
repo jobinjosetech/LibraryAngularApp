@@ -12,6 +12,46 @@ import { BookEditComponent } from './book-edit/book-edit.component';
 import { BookDeleteComponent } from './book-delete/book-delete.component';
 import { IssueBookComponent } from './issue-book/issue-book.component';
 import { BookSearchComponent } from './book-search/book-search.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const myRoute:Routes = [
+  {
+    path:"",
+    component:AdminLoginComponent
+  },
+  {
+    path:"userlogin",
+    component:UserLoginComponent
+  },
+  {
+    path:"userregistration",
+    component:UserRegisterationComponent
+  },
+  {
+    path:"add",
+    component:BookAddComponent
+  },
+  {
+    path:"view",
+    component:BookViewComponent
+  },
+  {
+    path:"edit",
+    component:BookEditComponent
+  },
+  {
+    path:"delete",
+    component:BookDeleteComponent
+  },
+  {
+    path:"issue",
+    component:IssueBookComponent
+  },
+  {
+    path:"search",
+    component:BookSearchComponent
+  },
+]
 
 @NgModule({
   declarations: [
@@ -28,7 +68,8 @@ import { BookSearchComponent } from './book-search/book-search.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
