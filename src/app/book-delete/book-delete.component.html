@@ -10,10 +10,10 @@
                     </div>
                     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12">
                         <label for="" class="form-label text-light">Book Title</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="title" [(ngModel)]="title">
                     </div>
                     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                        <button class="btn btn-danger">Delete Book</button>
+                        <button class="btn btn-danger" (click)="readValues()">Delete Book</button>
                     </div>
                 </div>
             </div>
