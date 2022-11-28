@@ -10,23 +10,23 @@
                     </div>
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label for="" class="form-label text-light">Name</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="name" [(ngModel)]="name">
                     </div>
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label for="" class="form-label text-light">Book Title</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="title" [(ngModel)]="title">
                     </div>
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label for="" class="form-label text-light">Date of Issue</label>
-                        <input type="date" class="form-control">
+                        <input type="date" class="form-control" name="date" [(ngModel)]="date">
                     </div>
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6 col-xl-6 col-xxl-6">
                         <label for="" class="form-label text-light">Membership number</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="membership" [(ngModel)]="membership">
                     </div>
                     
                     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                        <button class="btn btn-success">Issue Book</button>
+                        <button class="btn btn-success" (click)="readValues()">Issue Book</button>
                     </div>
                 </div>
             </div>

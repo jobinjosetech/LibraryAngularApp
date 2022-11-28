@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./book-delete.component.css']
 })
 export class BookDeleteComponent {
+  title=""
 
+  readValues = ()=>{
+    let value:any = {"title":this.title}
+    console.log(value)
+  }
 }
