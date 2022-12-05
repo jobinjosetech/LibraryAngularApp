@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-login',
@@ -9,6 +10,8 @@ export class AdminLoginComponent {
   username=""
   password=""
 
+  constructor(private route:Router){}
+
   readValues = ()=>{
     let values:any = {
       "username":this.username,
@@ -17,7 +20,7 @@ export class AdminLoginComponent {
     console.log(values)
 
     if (this.username=="jobin" && this.password=="12345") {
-      alert("Valid Login Credentials")
+      this.route.navigate(["/view"])
     } else {
       alert("Invalid Login Credentials")
     }
