@@ -18,6 +18,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
+import { UserIssuesComponent } from './user-issues/user-issues.component';
+import { AdminIssuesComponent } from './admin-issues/admin-issues.component';
 
 const myRoute:Routes = [
   {
@@ -61,6 +63,14 @@ const myRoute:Routes = [
     path:"search",
     component:BookSearchComponent
   },
+  {
+    path:"userissues",
+    component:UserIssuesComponent
+  },
+  {
+    path:"adminissues",
+    component:AdminIssuesComponent
+  },
 ]
 
 @NgModule({
@@ -77,7 +87,9 @@ const myRoute:Routes = [
     BookSearchComponent,
     NavbarComponent,
     AdminNavbarComponent,
-    AdminViewComponent
+    AdminViewComponent,
+    UserIssuesComponent,
+    AdminIssuesComponent
   ],
   imports: [
     BrowserModule,

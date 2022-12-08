@@ -141,7 +141,7 @@
                                             <li class="list-group-item">Price: Rs. {{i.price}}</li>
                                         </ul>
                                         <div class="card-body">
-                                            <a href="#" class="btn btn-primary">Buy now</a>
+                                            <button class="btn btn-primary" (click)="issueBook(i.id,i.title,i.price,i.image)">Buy now</button>
                                         </div>
                                     </div>
                                 </div>

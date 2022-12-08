@@ -23,6 +23,9 @@ export class UserLoginComponent {
         this.username = ""
         this.password = ""
         if (response.status == "success") {
+          localStorage.setItem('userId',response.userId)
+          localStorage.setItem('email',response.email)
+          localStorage.setItem('name',response.name)
           this.route.navigate(["/view"])
         } else {
           alert("Invalid Credential")

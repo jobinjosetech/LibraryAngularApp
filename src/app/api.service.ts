@@ -40,4 +40,16 @@ export class ApiService {
   getBookById = (data:any)=>{
     return this.http.post("http://localhost:8080/getBookById",data)
   }
+
+  issueBook = (data:any)=>{
+    return this.http.post("http://localhost:8080/issueBook",data)
+  }
+
+  getUserIssue = (data:any)=>{
+    return this.http.post("http://localhost:8080/getUserIssue",data)
+  }
+
+  getBookIssue = ()=>{
+    return this.http.get("http://localhost:8080/getBookIssue")
+  }
 }

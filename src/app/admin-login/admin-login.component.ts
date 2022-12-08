@@ -7,7 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-login.component.css']
 })
 export class AdminLoginComponent {
-  constructor(private route:Router){}
+  constructor(private route:Router){
+    localStorage.removeItem('userId')
+    localStorage.removeItem('email')
+    localStorage.removeItem('name')
+  }
   username=""
   password=""
 

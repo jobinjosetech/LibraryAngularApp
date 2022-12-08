@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 div-md-12 col-lg-12 div-xl-12 div-xxl-12 mt-5 text-center">
+            <h1 style="color: rgb(0, 115, 223); font-weight: bold;">Your Purchased Books</h1>
+        </div>
+        <div class="col-12 col-sm-12 div-md-12 col-lg-12 div-xl-12 div-xxl-12">
+            <div class="row mt-5">
+                <div class="col-12 col-sm-12 div-md-12 col-lg-12 div-xl-12 div-xxl-12 mb-3 mt-5">
+                    <div class="row g-3">
+                        <div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3" *ngFor="let i of issueBooks">
+                            <div class="card">
+                                <img height="380px" src="{{i.bookImage}}" class="card-img-top" alt="...">
+                                <div style="height:100px;" class="card-body">
+                                    <h5 class="card-title">{{i.bookName}}</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Issued on: {{i.date}}</li>
+                                    <li class="list-group-item">Price: {{i.bookPrice}}</li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
